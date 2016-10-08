@@ -1,4 +1,4 @@
-package com.brisbe.displayjokes;
+package com.udacity.displayjokes;
 
 import org.junit.Test;
 

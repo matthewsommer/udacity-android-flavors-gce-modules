@@ -1,4 +1,4 @@
-package com.brisbe.displayjokes;
+package com.udacity.displayjokes;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.brisbe.displayjokes.test", appContext.getPackageName());
+        assertEquals("com.udacity.displayjokes.test", appContext.getPackageName());
     }
 }
