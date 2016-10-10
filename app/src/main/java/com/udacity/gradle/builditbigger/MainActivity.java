@@ -6,9 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
-import com.udacity.displayjokes.DisplayJokesActivity;
-import com.udacity.JokeGenerator;
+import com.udacity.jokes.joke_activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -42,10 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Intent intent = new Intent(this, DisplayJokesActivity.class);
-        intent.putExtra("joke", JokeGenerator.randomJoke());
+        Intent intent = new Intent(this, joke_activity.class);
         startActivity(intent);
-
-        //Toast.makeText(this, JokeGenerator.randomJoke(), Toast.LENGTH_LONG).show();
     }
 }
