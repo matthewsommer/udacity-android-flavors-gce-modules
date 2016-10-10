@@ -1,7 +1,7 @@
 package com.udacity;
 
 public class JokeGenerator {
-        private static String[] jokeArray = {
+        public static String[] jokeArray = {
                 "My friend gave me his Epi-Pen as he was dying.\n" +
                         "It seemed very important to him that I have it.",
                 "You don't need a parachute to go skydiving.\n" +

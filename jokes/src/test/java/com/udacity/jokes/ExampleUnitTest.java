@@ -1,5 +1,8 @@
 package com.udacity.jokes;
 
+import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
