@@ -17,3 +17,30 @@ allprojects {
         jcenter()
     }
 }
+
+task runAppEngineAndTest {
+    dependsOn = ['runAppEngine', 'runAndroidTests', 'stopAppEngine']
+}
+
+task runAppEngine {
+    dependsOn ':backend:appengineRun'
+    doLast {
+        println "AppEngine server started"
+    }
+}
+
+task runAndroidTests {
+    shouldRunAfter 'runAppEngine'
+    dependsOn ':app:connectedCheck'
+    doLast {
+        println "Testing finished"
+    }
+}
+
+task stopAppEngine {
+    mustRunAfter 'runAndroidTests'
+    dependsOn ':backend:appengineStop'
+    doLast {
+        println "Server stopped"
+    }
+}

@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.udacity.gradle.builditbigger.R;
-import com.udacity.jokes.joke_activity;
+import com.udacity.jokes.Joke_Activity;
 
 public class FreeMainActivity extends AppCompatActivity {
 
@@ -41,7 +41,7 @@ public class FreeMainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Intent intent = new Intent(this, joke_activity.class);
+        Intent intent = new Intent(this, Joke_Activity.class);
         startActivity(intent);
     }
 }
