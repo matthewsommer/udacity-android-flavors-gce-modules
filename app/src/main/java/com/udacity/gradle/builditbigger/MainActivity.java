@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void tellJoke(View view) {
         Intent intent = new Intent(this, Joke_Activity.class);
+        intent.putExtra("joke", "this project requirement");
         startActivity(intent);
     }
 }

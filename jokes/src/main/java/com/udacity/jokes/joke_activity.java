@@ -18,6 +18,14 @@ public class Joke_Activity extends AppCompatActivity implements AsyncTaskDelegat
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jokes_display);
 
+        Intent intent = getIntent();
+        String default_joke = intent.getStringExtra("joke");
+
+        //It doesn't make sense for the first activity to have a dependency
+        //on the joke generator when the jokes module can be self contained
+        //isn't that the point of this architecture? Now if I want to make an
+        //app and plug-in a joke generator it would be easy.
+
         mCallback = new EndpointsAsyncTask.Callback(){
             @Override
             public void onTaskFinished(String joke) {
