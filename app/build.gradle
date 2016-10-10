@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.1"
-
     defaultConfig {
         applicationId "com.udacity.gradle.builditbigger"
         minSdkVersion 15
@@ -16,6 +15,14 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        free {
+            applicationId 'com.udacity.gradle.builditbigger.free'
+        }
+        paid {
+            applicationId 'com.udacity.gradle.builditbigger.paid'
         }
     }
 }
