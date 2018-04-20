@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.udacity.gradle.builditbigger"
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -17,22 +17,27 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "tier"
+
     productFlavors {
         free {
             applicationId 'com.udacity.gradle.builditbigger.free'
+            dimension "tier"
         }
         paid {
             applicationId 'com.udacity.gradle.builditbigger.paid'
+            dimension "tier"
         }
     }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     // Added for AdMob
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    freeCompile 'com.google.android.gms:play-services-ads:9.6.1'
-    compile 'com.google.code.findbugs:jsr305:2.0.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    freeImplementation 'com.google.android.gms:play-services-ads:15.0.0'
+    implementation 'com.google.code.findbugs:jsr305:2.0.1'
     //    compile project(path: ':backend', configuration: 'android-endpoints')
-    compile project(':jokes')
+    implementation project(':jokes')
 }

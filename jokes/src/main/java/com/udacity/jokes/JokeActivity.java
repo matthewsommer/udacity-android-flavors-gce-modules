@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.udacity.jokes.backend.myApi.MyApi;
 
-public class Joke_Activity extends AppCompatActivity implements AsyncTaskDelegate {
+public class JokeActivity extends AppCompatActivity implements AsyncTaskDelegate {
 
     TextView textViewJoke = null;
     private static MyApi myApiService = null;
