@@ -35,7 +35,11 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     // Added for AdMob
+    implementation 'com.android.support:customtabs:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:support-media-compat:27.1.1'
     implementation 'com.android.support:appcompat-v7:27.1.1'
+
     freeImplementation 'com.google.android.gms:play-services-ads:15.0.0'
     implementation 'com.google.code.findbugs:jsr305:2.0.1'
     //    compile project(path: ':backend', configuration: 'android-endpoints')
